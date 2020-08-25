@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Asset/favicon.png"/>
+    
+    <!-- Ini gua make internal css biar cepet aja -->
+    <style>
+        @font-face {
+            font-family: Qanelas-Medium ;
+            src: url(Asset/Qanelas/Qanelas-Medium.otf);
+        }
+        @font-face {
+            font-family: Qanelas-Bold;
+            src: url(Asset/Qanelas/Qanelas-Bold.otf);
+        }
+        body {
+            background-image: url("Asset/bg.jpg");
+            height: 900px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-box-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-container {
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: relative;
+            margin: 3rem 0;
+        }
+        .header-container .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .header-container .logo img {
+            width: 350px;
+            height: auto;
+        }
+        .body-container {
+            margin-top: 10rem;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .body-container .body-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* position: relative; */
+        }
+        .body-container .body-image img {
+            width: 1000px;
+            height: auto;
+        }
+        .body-container .body-desc {
+            font-family: Qanelas-Medium;
+            font-size: 25px;
+            color: #dededf;
+            position: relative;
+            text-align: center;
+        }
+        .footer {
+            padding-top: 2rem;
+            width: 100%;
+            margin-top: auto;
+        }
+        .footer .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            align-items: stretch;
+            width: 100%;
+        }
+        .footer .footer-container .footer-left {
+            margin: 0 22rem 1rem 5rem;
+            flex: 1;
+            /* background-color: red; */
+        }
+        .footer .footer-container .footer-right {
+            margin: 0 5rem 1rem 25rem;
+            flex: 1;
+            /* background-color: blue; */
+        }
+        .footer .footer-container .footer-left .footer-left-text {
+            text-align: left;
+            font-family: Qanelas-Bold;
+            font-size: 25px;
+            color: #dededf;
+        }
+        .footer .footer-container .footer-right .footer-right-text {
+            text-align: left;
+            font-family: Qanelas-Bold;
+            font-size: 25px;
+            color: #dededf;
+        }
+        .footer .footer-container .footer-right .footer-right-text-med {
+            text-align: left;
+            font-family: Qanelas-Medium;
+            font-size: 15px;
+            color: #dededf;
+        }
+        .footer .footer-container .footer-left .logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 1rem;
+        }
+        .footer .footer-container .footer-left .logo-container img {
+            width: 130px;
+        }
+        .footer .footer-container .footer-right .socmed-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 1rem 0;
+        }
+        .footer .footer-container .footer-right .socmed-container img {
+            padding-right: 1rem;
+            width: 40px;
+        }
+
+        @media (max-width: 1366px) {
+            .body-container {
+                margin-top: 10rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .body-container .body-image img {
+                width: 1000px;
+                height: auto;
+            }
+            .body-container .body-desc {
+                font-family: Qanelas-Medium;
+                font-size: 25px;
+                color: #dededf;
+                position: relative;
+                text-align: center;
+            }
+            .footer .footer-container .footer-left {
+                margin: 0 25rem 1rem 5rem;
+                flex: 1;
+                /* background-color: red; */
+            }
+            .footer .footer-container .footer-right {
+                margin: 0 5rem 1rem 17rem;
+                flex: 1;
+                /* background-color: blue; */
+            }
+        }
+        @media (max-width: 1024px) {
+            .body-container {
+                margin-top: 5rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .body-container .body-image img {
+                width: 950px;
+                height: auto;
+            }
+            .body-container .body-desc {
+                font-family: Qanelas-Medium;
+                font-size: 25px;
+                color: #dededf;
+                position: relative;
+                text-align: center;
+            }
+            .footer .footer-container .footer-left {
+                margin: 0 11rem 1rem 5rem;
+                flex: 1;
+                /* background-color: red; */
+            }
+            .footer .footer-container .footer-right {
+                margin: 0 5rem 1rem 10rem;
+                flex: 1;
+                /* background-color: blue; */
+            }
+        }
+        @media (max-width: 768px) {
+            .body-container {
+                margin-top: 10rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .body-container .body-image img {
+                width: 700px;
+                height: auto;
+            }
+            .body-container .body-desc {
+                font-family: Qanelas-Medium;
+                font-size: 22px;
+                color: #dededf;
+                position: relative;
+                text-align: center;
+            }
+            .footer .footer-container .footer-left {
+                margin: 0 1rem 1rem 5rem;
+                flex: 1;
+                /* background-color: red; */
+            }
+            .footer .footer-container .footer-right {
+                margin: 0 5rem 1rem 2rem;
+                flex: 1;
+                /* background-color: blue; */
+            }
+        }
+        @media (max-width: 414px) {
+            .header-container .logo img {
+                width: 300px;
+                height: auto;
+            }
+            .body-container {
+                margin-top: 7rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .body-container .body-image img {
+                width: 400px;
+                height: auto;
+            }
+            .body-container .body-desc {
+                font-family: Qanelas-Medium;
+                font-size: 17px;
+                color: #dededf;
+                position: relative;
+                text-align: center;
+                padding: 1rem;
+            }
+            .footer .footer-container .footer-left {
+                margin: 0 5rem .5rem 7rem;
+                flex: 1;
+                /* background-color: red; */
+            }
+            .footer .footer-container .footer-right {
+                margin: 0 7rem 1rem 7rem;
+                flex: 1;
+                /* background-color: blue; */
+            }
+            .footer .footer-container .footer-left .footer-left-text {
+                text-align: left;
+                font-family: Qanelas-Bold;
+                font-size: 20px;
+                color: #dededf;
+            }
+            .footer .footer-container .footer-right .footer-right-text {
+                text-align: left;
+                font-family: Qanelas-Bold;
+                font-size: 20px;
+                color: #dededf;
+            }
+            .footer .footer-container .footer-right .footer-right-text-med {
+                text-align: left;
+                font-family: Qanelas-Medium;
+                font-size: 13px;
+                color: #dededf;
+            }
+            .footer .footer-container .footer-left .logo-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-top: 1rem;
+            }
+            .footer .footer-container .footer-left .logo-container img {
+                width: 100px;
+            }
+            .footer .footer-container .footer-right .socmed-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            .footer .footer-container .footer-right .socmed-container img {
+                padding-right: 1rem;
+                width: 30px;
+            }
+        }
+        @media (max-width: 375px) {
+            .header-container .logo img {
+                width: 300px;
+                height: auto;
+            }
+            .body-container {
+                margin-top: 7rem;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .body-container .body-image img {
+                width: 350px;
+                height: auto;
+            }
+            .body-container .body-desc {
+                font-family: Qanelas-Medium;
+                font-size: 17px;
+                color: #dededf;
+                position: relative;
+                text-align: center;
+                padding: 1rem;
+            }
+            .footer .footer-container .footer-left {
+                margin: 0 3rem .5rem 6rem;
+                flex: 1;
+                /* background-color: red; */
+            }
+            .footer .footer-container .footer-right {
+                margin: 0 5rem 1rem 6rem;
+                flex: 1;
+                /* background-color: blue; */
+            }
+            .footer .footer-container .footer-left .footer-left-text {
+                text-align: left;
+                font-family: Qanelas-Bold;
+                font-size: 20px;
+                color: #dededf;
+            }
+            .footer .footer-container .footer-right .footer-right-text {
+                text-align: left;
+                font-family: Qanelas-Bold;
+                font-size: 20px;
+                color: #dededf;
+            }
+            .footer .footer-container .footer-right .footer-right-text-med {
+                text-align: left;
+                font-family: Qanelas-Medium;
+                font-size: 13px;
+                color: #dededf;
+            }
+            .footer .footer-container .footer-left .logo-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-top: 1rem;
+            }
+            .footer .footer-container .footer-left .logo-container img {
+                width: 100px;
+            }
+            .footer .footer-container .footer-right .socmed-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            .footer .footer-container .footer-right .socmed-container img {
+                padding-right: 1rem;
+                width: 30px;
+            }
+        }
+    </style>
+    <title>Computerun2020</title>
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Asset/logo.png">
+            </a>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="body-image">
+            <img src="Asset/Running Soon.png">
+        </div>
+        <div class="body-desc">
+            COMPUTERUN 2020 is coming to you shortly. Stay connected with us!
+        </div>
+    </div>
+    <div class="footer">
+		<div class="footer-container">
+			<div class="footer-left">
+                <div class="footer-left-text">
+                    organized by
+                </div>
+                <div class="logo-container">
+                    <a href="https://student-activity.binus.ac.id/himsisfo/">
+                        <img src="Asset/HIMSISFO Logo.png">
+                    </a>
+                    <a href="https://himti.or.id/">
+                        <img src="Asset/HIMTI Logo.png">
+                    </a>
+                </div>
+			</div>
+			<div class="footer-right">
+				<div class="footer-right-text">
+                    follow us on
+                </div>
+                <div class="socmed-container">
+                    <a href="https://www.instagram.com/computerun">
+                        <img src="Asset/Instagram.png">
+                    </a>
+                    <a href="https://line.me/R/ti/p/%40995bowex">
+                        <img src="Asset/LINE.png">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCFRD-EdSjCiUXfaU21ueryA/featured?view_as=subscriber">
+                        <img src="Asset/YouTube.png">
+                    </a>
+                    <a href="https://www.facebook.com/computerun.computerun.9">
+                        <img src="Asset/Facebook.png">
+                    </a>
+                </div>
+                <div class="footer-right-text-med">
+                    HIMSISFO & HIMTI BINUS University<br>© <strong style="font-family: Qanelas-Bold;">2020</strong> | All rights reserved
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
