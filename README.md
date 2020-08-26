@@ -1,5 +1,5 @@
-# computerun-comingsoon
-Static Webpage for Comingsoon Computerun2020
+# computerun-runningsoon
+Static Webpage for Runningsoon Computerun2020
 
 Main Repository for webapps Computerun 2020 using LAMP Stack
 [Click Here](https://github.com/reinhart1010/computerun-2020).
