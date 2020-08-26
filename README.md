@@ -6,5 +6,5 @@ Main Repository for webapps Computerun 2020 using LAMP Stack
 
 Created by [hansburnthem](https://www.instagram.com/hnifrma/). :D
 
-## Guidelines for Comingsoon Computerun2020 Static Webpage
+## Guidelines for Runningsoon Computerun2020 Static Webpage
 ![Image of UI](https://i.ibb.co/sRbgQTW/Computerun-2020-Web-Guidelines-Coming-Soon.png)
